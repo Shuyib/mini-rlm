@@ -12,7 +12,12 @@ license = {text = "Apache Software License 2.0"}
 authors = [{name = "Shuyib", email = "NyabutiM@proton.me"}]
 keywords = ['rlm,lisette,nbdev,trace,repl,litellm,toolslm,rlm']
 classifiers = ["Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only"]
-dependencies = []
+dependencies = [
+	"ipython>=9.12.0",
+	"lisette>=0.1.10",
+	"litellm>=1.83.8",
+	"toolslm>=0.3.36",
+]
 
 [project.urls]
 Repository = "https://github.com/Shuyib/mini-rlm"
