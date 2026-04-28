@@ -137,5 +137,45 @@ make nbdev-prepare
 python -m build
 git tag -a v0.1.1 -m "Release v0.1.1"
 gh release create v0.1.1 --title "v0.1.1" --notes "Patch release with CI and packaging fixes." dist/*
+
+## Using Notes.md and the package
+
+- **Install**: install the published package or the local wheel artifact
+
+```bash
+pip install mini_rlm==0.1.1
+# or, from a local build artifact:
+pip install dist/mini_rlm-0.1.1-py3-none-any.whl
+```
+
+- **Quick import example**
+
+```python
+from mini_rlm.rlm_lisette_v2 import rlm, RLM, prep_shell
+
+print("version", __import__("mini_rlm").__version__)
+# small smoke check; imports are guarded so this is safe without LLM creds
+print("has_rlm", callable(rlm))
+```
+
+- **Open the repository Notes.md locally** (handy during development):
+
+```python
+from pathlib import Path
+repo_root = Path(__file__).resolve().parents[1]
+notes = (repo_root / "Notes.md").read_text(encoding="utf8")
+print(notes.splitlines()[:20])
+```
+
+- **Access Notes.md from an installed package** (optional):
+
+```python
+import importlib.resources as pkg_resources
+import mini_rlm
+with pkg_resources.open_text(mini_rlm, "Notes.md") as f:
+	print(f.read()[:120])
+```
+
+If you want `Notes.md` to be installed with the package, add it to `pyproject.toml` (package data / include) so it becomes available via `importlib.resources`.
 ```
 
