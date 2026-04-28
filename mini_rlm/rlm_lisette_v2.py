@@ -8,9 +8,13 @@ __all__ = ['REPL_SYSTEM_PROMPT', 'llm_query', 'run_repl', 'prep_shell', 'rlm', '
 import os
 import json
 import random
-from litellm import register_model
+try:
+    from litellm import register_model
+except Exception:
+    register_model = None  # litellm not available in CI; dependent code should handle this
 
 # %% ../nbs/rlm_lisette_v2.ipynb #2f244ea8
+#| eval: false
 from lisette import *
 
 # %% ../nbs/rlm_lisette_v2.ipynb #4fcf17c7
