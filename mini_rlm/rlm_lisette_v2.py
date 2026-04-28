@@ -18,7 +18,11 @@ except Exception:
 from lisette import *
 
 # %% ../nbs/rlm_lisette_v2.ipynb #4fcf17c7
-from toolslm.shell import get_shell
+try:
+    from toolslm.shell import get_shell
+except Exception:
+    def get_shell():
+        raise ModuleNotFoundError("toolslm is required for REPL support. Install toolslm to use this feature.")
 
 # %% ../nbs/rlm_lisette_v2.ipynb #fa40f93f
 import litellm
