@@ -1,0 +1,13 @@
+lisette==0.1.10
+nbdev==3.0.14
+fastcore==1.12.39
+ipython==9.12.0
+litellm==1.83.8
+toolslm==0.3.36
+tiktoken==0.12.0
+rich==15.0.0
+execnb==0.2.1
+asttokens==3.0.1
+astunparse==1.6.3
+ghapi==1.0.13
+watchdog==6.0.0
