@@ -25,7 +25,15 @@ except Exception:
         raise ModuleNotFoundError("toolslm is required for REPL support. Install toolslm to use this feature.")
 
 # %% ../nbs/rlm_lisette_v2.ipynb #fa40f93f
-import litellm
+try:
+    import litellm
+except Exception:
+    class _LiteLLMStub:
+        def __getattr__(self, _name):
+            raise ModuleNotFoundError(
+                "litellm is required for LLM calls. Install litellm to use this feature."
+            )
+    litellm = _LiteLLMStub()
 
 # %% ../nbs/rlm_lisette_v2.ipynb #1a35f29e
 def llm_query(query: str, model="openai/gpt-oss-120b", 
