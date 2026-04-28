@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini_rlm"
+dynamic = ["version"]
+description = "Recursive Language Model package providing `RLM` (REPL-based tracing, helpers). Integrates lisette, litellm, and toolslm; intended for notebook-first development with nbdev."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "Apache Software License 2.0"}
+authors = [{name = "Shuyib", email = "NyabutiM@proton.me"}]
+keywords = ['rlm,lisette,nbdev,trace,repl,litellm,toolslm,rlm']
+classifiers = ["Programming Language :: Python :: 3", "Programming Language :: Python :: 3 :: Only"]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/Shuyib/mini-rlm"
+Documentation = "https://Shuyib.github.io/Shuyib/mini-rlm/"
+
+[project.entry-points.nbdev]
+mini_rlm = "mini_rlm._modidx:d"
+
+[tool.setuptools.dynamic]
+version = {attr = "mini_rlm.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["mini_rlm"]
+
+[tool.nbdev]
+doc_path = 'docs'
+nbs_path = 'nbs'
+original_notebook = 'nbs/rlm_lisette_v2.ipynb'
+original_notebook_credit = 'original_notebook can found here: https://share.solve.it.com/d/024412293157f7aabef9fc2e7746e8bd & research paper Zhang et. al https://alexzhang13.github.io/blog/2025/rlm/'
