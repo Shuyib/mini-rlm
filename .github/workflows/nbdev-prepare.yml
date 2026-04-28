@@ -32,6 +32,14 @@ jobs:
           pip install -r requirements.txt || true
           pip install nbdev
 
+      - name: Ensure nbs metadata exists
+        run: |
+          # ensure nbs directory exists and nbdev.yml is present to avoid nbdev errors
+          mkdir -p nbs
+          if [ ! -f nbs/nbdev.yml ] && [ -f nbs/nbdev.yml.example ]; then
+            cp nbs/nbdev.yml.example nbs/nbdev.yml
+          fi
+
       - name: Run nbdev-prepare
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
