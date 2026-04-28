@@ -1,0 +1,9 @@
+project:
+  output-dir: docs
+
+website:
+  title: "mini_rlm"
+  site-url: "https://Shuyib.github.io/Shuyib/mini-rlm"
+  description: "Recursive Language Model package providing `RLM` (REPL-based tracing, helpers). Integrates lisette, litellm, and toolslm; intended for notebook-first development with nbdev."
+  repo-branch: main
+  repo-url: "https://github.com/Shuyib/mini-rlm"
