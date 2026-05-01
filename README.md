@@ -131,7 +131,7 @@ Don't hand-edit files in `mini_rlm/` — they get overwritten on every export.
 
 - This package builds on [Alex Zhang's RLM blog post and research](https://alexzhang13.github.io/blog/2025/rlm/)
 - The [original notebook](https://share.solve.it.com/d/024412293157f7aabef9fc2e7746e8bd) was shared on SolveIt by an anonymous author — turned into a package with OpenRouter support
-- Built with [lisette](https://github.com/fastai/lisette) (tool-use LLM framework), [litellm](https://github.com/BerriAI/litellm) (LLM API standardization), and [toolslm](https://github.com/fastai/toolslm) (REPL shell)
+- Built with [lisette](https://github.com/AnswerDotAI/lisette) (tool-use LLM framework), [litellm](https://github.com/BerriAI/litellm) (LLM API standardization), and [toolslm](https://github.com/AnswerDotAI/toolslm) (REPL shell)
 
 ## License
 
