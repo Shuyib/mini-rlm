@@ -5,7 +5,7 @@ A lightweight Python toolkit for **Recursive Language Modeling** — giving an L
 Think of it like this: you dump a novel into a model and ask "what's the plot twist?" Most models can't handle a whole novel. But what if the model could break it into chapters, summarize each one, then read the summaries and answer? That's the idea.
 
 <p align="center">
-  <video src="rlm-animation/rlm_explainer_v3_slow.mp4" autoplay loop muted playsinline width="640"></video>
+  <video src="https://github.com/Shuyib/mini-rlm/raw/main/rlm-animation/rlm_explainer_v3_slow.mp4" autoplay loop muted playsinline width="640"></video>
   <br/>
   <em>RLM pipeline: context too big → chunk → delegate → aggregate → answer</em>
 </p>
