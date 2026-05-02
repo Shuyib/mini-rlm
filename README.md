@@ -1,20 +1,10 @@
-
-
-https://github.com/user-attachments/assets/29cb3226-887f-4f05-93ce-a3ceb0d5a742
-
 # mini-rlm
 
 A lightweight Python toolkit for **Recursive Language Modeling** — giving an LLM the ability to step back, chunk up a big context, and call a helper LLM on each piece before answering.
 
 Think of it like this: you dump a novel into a model and ask "what's the plot twist?" Most models can't handle a whole novel. But what if the model could break it into chapters, summarize each one, then read the summaries and answer? That's the idea.
 
-<p align="center">
-<video src="https://github.com/user-attachments/assets/3825f598-75e6-415f-94a8-932911863c97" width="100%" controls></video>
-    <img src="rlm-animation/thumbnail.jpg" alt="RLM pipeline: context too big → chunk → delegate → aggregate → answer" width="640">
-  </a>
-  <br/>
-  <em>RLM pipeline: context too big → chunk → delegate → aggregate → answer</em>
-</p>
+https://github.com/user-attachments/assets/29cb3226-887f-4f05-93ce-a3ceb0d5a742
 
 ## Why?
 
