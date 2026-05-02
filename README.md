@@ -4,6 +4,12 @@ A lightweight Python toolkit for **Recursive Language Modeling** — giving an L
 
 Think of it like this: you dump a novel into a model and ask "what's the plot twist?" Most models can't handle a whole novel. But what if the model could break it into chapters, summarize each one, then read the summaries and answer? That's the idea.
 
+<p align="center">
+  <video src="rlm-animation/rlm_explainer_v3_slow.mp4" autoplay loop muted playsinline width="640"></video>
+  <br/>
+  <em>RLM pipeline: context too big → chunk → delegate → aggregate → answer</em>
+</p>
+
 ## Why?
 
 LLMs have context windows. Big ones, sure — 500K tokens, even a million. But they don't always use them well. Put a million tokens of noise in there and the signal gets lost in the middle.
@@ -126,6 +132,10 @@ make nbdev-prepare          # export + test + clean (do this before push)
 ```
 
 Don't hand-edit files in `mini_rlm/` — they get overwritten on every export.
+
+## Working with AI Agents
+
+This repository includes an `AGENTS.md` file designed for AI coding agents (Claude Code, Codex, Copilot, Cursor, Hermes, etc.). It covers project structure, the nbdev workflow (notebooks are source of truth, not `mini_rlm/` files), key API surfaces, common development tasks, and Make targets. AI agents should read `AGENTS.md` when first opening this repo.
 
 ## Credits
 
